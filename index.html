@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,6 +13,7 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
             </ul>
@@ -21,74 +22,127 @@
 
     <section id="about">
         <h2>About</h2>
-        <img src="profile.jpg" alt="Profile Picture" style="width:200px;height:200px; margin-top: 20px; ">
-        <p>Haruki<br/>
-        大阪公立大学工業高等専門学校 知能情報コース 2年生<br/>
-        情報系を学習中</p>
-        <p><a href="https://github.com/OMU-Haruki" target="_blank"><img src="github-mark.png" alt="GitHub" style="width:30px;height:30px;"></a></p>
+        <div class="profile-container">
+            <img src="images/profile.jpg" alt="Profile Picture" style="width:200px;height:200px;">
+            <div class="profile-info">
+                <h3>Haruki</h3>
+                <p>大阪公立大学工業高等専門学校 知能情報コース 3年生<br/>
+                情報系を学習中</p>
+                <div class="social-links">
+                    <a href="https://github.com/OMU-Haruki" target="_blank">
+                        <img src="images/github-mark.png" alt="GitHub" style="width:30px;height:30px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Blog">
+        <h2>Blog</h2>
+        <div class="blog-cta">
+            <p>プログラミングや学習について書いた記事を掲載しています。</p>
+            <a href="blog.html" style="display: inline-block; background: forestgreen; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; margin: 20px 0; font-size: 1.1em;">記事一覧を見る</a>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
             <h3>音声波形表示プログラム</h3>
-            <p>制作時期2025年2月</p>
-            <p>作成時間:約10時間</p>
-            <img src="audiowaveformviewer1.png" alt="Audio Waveform Viewer1" style="width:290px;height:270px;">
-            <img src="audiowaveformviewer2.png" alt="Audio Waveform Viewer2" style="width:290px;height:270px;">
-            <img src="audiowaveformviewer3.png" alt="Audio Waveform Viewer3" style="width:290px;height:270px;">
-            <p>PySide6、soundfile、Matplotlibを使った、音声ファイルの波形と詳細を表示し、サンプリングレートとモノラル・ステレオの編集ができるツールです。音声ファイルをインポートすると、ファイル名、サンプリングレート、チャンネル数（モノラル・ステレオ）、長さを表示します。また、音声の波形を表示します。モノラル音声であれば、同じ波形が二つ表示されます。
-                ステレオの音声であれば、上に左チャンネル、下に右チャンネルの波形が表示されます。サンプリングレートとチャンネル数を変更してエクスポートすることができます。
-            </p><a href="https://github.com/OMU-Haruki/Audio-Waveform-Viewer" target="_blank">GitHub</a>
+            <div class="project-meta">
+                <p>制作時期: 2025年2月</p>
+                <p>作成時間: 約10時間</p>
+            </div>
+            <div class="project-images">
+                <img src="images/projects/audiowaveformviewer1.png" alt="Audio Waveform Viewer1" style="width:290px;height:270px;">
+                <img src="images/projects/audiowaveformviewer2.png" alt="Audio Waveform Viewer2" style="width:290px;height:270px;">
+                <img src="images/projects/audiowaveformviewer3.png" alt="Audio Waveform Viewer3" style="width:290px;height:270px;">
+            </div>
+            <div class="project-description">
+                <p>PySide6、soundfile、Matplotlibを使った、音声ファイルの波形と詳細を表示し、サンプリングレートとモノラル・ステレオの編集ができるツールです。</p>
+                <p>音声ファイルをインポートすると、ファイル名、サンプリングレート、チャンネル数（モノラル・ステレオ）、長さを表示します。また、音声の波形を表示します。モノラル音声であれば、同じ波形が二つ表示されます。ステレオの音声であれば、上に左チャンネル、下に右チャンネルの波形が表示されます。</p>
+                <p>サンプリングレートとチャンネル数を変更してエクスポートすることができます。</p>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/OMU-Haruki/Audio-Waveform-Viewer" target="_blank">GitHub</a>
+            </div>
         </div>
         <div class="project">
             <h3>Pygameドラムマシン</h3>
-            <p>制作時期2025年1月</p>
-            <img src="pygamedrummachine1.png" alt="Pygame Drum Machine1" style="width:360px;height:180px;">
-            <img src="pygamedrummachine2.png" alt="Pygame Drum Machine2" style="width:360px;height:180px;">
-            <img src="pygamedrummachine3.png" alt="Pygame Drum Machine3" style="width:360px;height:180px;">
-            <img src="pygamedrummachine.gif" alt="Pygame Drum Machine" style="width:360px;height:180px;">
-            <p>PythonとPygameで作成した、ドラムシーケンサー、リズムマシンを再現したアプリケーションです。6つのドラム音にそれぞれの行が割り振られ、その中にノーツを配置することで、ドラムパートを作成し、再生し、聞くことができます。TR-808のドラム音源(フリー音源)を使用しています。マウスとキーボードのどちらにもアプリを使うための操作があります。
-                BPMの表示・調整も可能です。ドラム音の種類は上から順に、ベースドラム、スネアドラム、ハイハット、トム、クラップ、オープンハイハットとなっています。マス目のところをクリックすると、再生したときに、その行に割り振られている音が鳴るノーツを配置することができます。また、再生している状態で、ドラム音が割り振られた数字キーを押すと、リアルタイムで演奏してノーツを配置することができます。
-                ノーツを再びクリックすることで、消すことができます。また、'R'キーで全てのノーツを消去することが可能です。下のPlay/Pauseボタンをクリックする、または、スペースキーを押すと、再生・停止することができます。再生・停止ボタンの右にBPMの表示があります。その横のプラスとマイナスのボタンをクリックする、または、上下矢印キーを押すことで、BPMを10ずつ増やしたり、減らしたりできます。
-                キーボードの左右矢印キーを押すことで、拍子の数を変更することが可能です。</p>
-            <p><a href="https://github.com/OMU-Haruki/Pygame-Drum-Machine" target="_blank">GitHub</a>
+            <div class="project-meta">
+                <p>制作時期: 2025年1月</p>
+            </div>
+            <div class="project-images">
+                <img src="images/projects/pygamedrummachine1.png" alt="Pygame Drum Machine1" style="width:360px;height:180px;">
+                <img src="images/projects/pygamedrummachine2.png" alt="Pygame Drum Machine2" style="width:360px;height:180px;">
+                <img src="images/projects/pygamedrummachine3.png" alt="Pygame Drum Machine3" style="width:360px;height:180px;">
+                <img src="images/projects/pygamedrummachine.gif" alt="Pygame Drum Machine" style="width:360px;height:180px;">
+            </div>
+            <div class="project-description">
+                <p>PythonとPygameで作成した、ドラムシーケンサー、リズムマシンを再現したアプリケーションです。6つのドラム音にそれぞれの行が割り振られ、その中にノーツを配置することで、ドラムパートを作成し、再生し、聞くことができます。</p>
+                <p>TR-808のドラム音源(フリー音源)を使用しています。マウスとキーボードのどちらにもアプリを使うための操作があります。BPMの表示・調整も可能です。</p>
+                <p>ドラム音の種類は上から順に、ベースドラム、スネアドラム、ハイハット、トム、クラップ、オープンハイハットとなっています。マス目のところをクリックすると、再生したときに、その行に割り振られている音が鳴るノーツを配置することができます。</p>
+                <p>また、再生している状態で、ドラム音が割り振られた数字キーを押すと、リアルタイムで演奏してノーツを配置することができます。ノーツを再びクリックすることで、消すことができます。また、'R'キーで全てのノーツを消去することが可能です。</p>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/OMU-Haruki/Pygame-Drum-Machine" target="_blank">GitHub</a>
+            </div>
         </div>
         <div class="project">
             <h3>第60回高専祭展示物</h3>
-            <p>制作時期2024年10~11月</p>
-            <img src="project2.gif" alt="第60回高専祭展示物" style="width:360px;height:270px;">
-            <p>自分の班による紙コップの位置と向きを当てるUnityゲーム。開発補助をしました。</p>
+            <div class="project-meta">
+                <p>制作時期: 2024年10~11月</p>
+            </div>
+            <div class="project-images">
+                <img src="images/projects/project2.gif" alt="第60回高専祭展示物" style="width:360px;height:270px;">
+            </div>
+            <div class="project-description">
+                <p>自分の班による紙コップの位置と向きを当てるUnityゲーム。開発補助をしました。</p>
+            </div>
         </div>
         <div class="project">
             <h3>高専生育成シミュレーションゲーム</h3>
-            <p>制作時期2024年7月</p>
-            <img src="project1.gif" alt="Kosen ikusei simulation" style="width:360px;height:270px;">
-            <p>Pythonで作成した育成シミュレーションゲーム。</p>
-            <p><a href="https://github.com/OMU-Haruki/Kosen-ikusei-simulation" target="_blank">GitHub</a>, <a href="https://colab.research.google.com/github/OMU-Haruki/Kosen-ikusei-simulation/blob/main/高専生育成シミュレーション.ipynb" target="_blank">Colab</a></p>
+            <div class="project-meta">
+                <p>制作時期: 2024年7月</p>
+            </div>
+            <div class="project-images">
+                <img src="images/projects/project1.gif" alt="Kosen ikusei simulation" style="width:360px;height:270px;">
+            </div>
+            <div class="project-description">
+                <p>Pythonで作成した育成シミュレーションゲーム。</p>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/OMU-Haruki/Kosen-ikusei-simulation" target="_blank">GitHub</a>
+                <a href="https://colab.research.google.com/github/OMU-Haruki/Kosen-ikusei-simulation/blob/main/高専生育成シミュレーション.ipynb" target="_blank">Colab</a>
+            </div>
         </div>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
-        <p>全て学校授業レベル(初級者)の使用経験はあります。</p>
-        <h3>プログラミング言語</h3>
-        <ul>
-            <li>Python</li>
-            <li>C#</li>
-            <li>Arduino言語</li>
-        </ul>
-        <h3>ソフトウェア</h3>
-        <ul>
-            <li>Visual Studio Code</li>
-            <li>Unity</li>
-            <li>ArduinoIDE</li>
-        </ul>
-        <p></p>
+        <p>全て学校の授業レベル（初級者）での使用経験があります。</p>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>プログラミング言語</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>C#</li>
+                    <li>Arduino言語</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>ソフトウェア</h3>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>Unity</li>
+                    <li>Arduino IDE</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 OMU-Haruki</p>
+        <p>&copy; 2025 OMU-Haruki</p>
     </footer>
 </body>
 </html>
