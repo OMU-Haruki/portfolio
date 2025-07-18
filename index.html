@@ -48,15 +48,41 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
+            <h3>JavaScriptに関連する技術解説</h3>
+            <div class="project-meta">
+                <p>制作時期: 2025年7月</p>
+                <p>作成時間: 約10時間</p>
+            </div>
+            <div class="project-description">
+                <p>JavaScriptの基本的な文法や構文、特徴について解説した記事です。内容はBlogに掲載しています。</p>
+            </div>
+            <div class="project-links">
+                <a href="blog.html" target="_blank">Blog</a>
+            </div>
+        </div>
+        <div class="project">
             <h3>音声波形表示プログラム</h3>
             <div class="project-meta">
                 <p>制作時期: 2025年2月</p>
                 <p>作成時間: 約10時間</p>
             </div>
             <div class="project-images">
-                <img src="images/projects/audiowaveformviewer1.png" alt="Audio Waveform Viewer1" style="width:290px;height:270px;">
-                <img src="images/projects/audiowaveformviewer2.png" alt="Audio Waveform Viewer2" style="width:290px;height:270px;">
-                <img src="images/projects/audiowaveformviewer3.png" alt="Audio Waveform Viewer3" style="width:290px;height:270px;">
+                <div class="image-carousel" data-images='[
+                    {"src": "images/projects/audiowaveformviewer1.png", "alt": "Audio Waveform Viewer1"},
+                    {"src": "images/projects/audiowaveformviewer2.png", "alt": "Audio Waveform Viewer2"},
+                    {"src": "images/projects/audiowaveformviewer3.png", "alt": "Audio Waveform Viewer3"}
+                ]'>
+                    <div class="carousel-container">
+                        <img src="images/projects/audiowaveformviewer1.png" alt="Audio Waveform Viewer1" class="carousel-image active" style="width:290px;height:270px;">
+                        <button class="carousel-prev" aria-label="前の画像">‹</button>
+                        <button class="carousel-next" aria-label="次の画像">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                </div>
             </div>
             <div class="project-description">
                 <p>PySide6、soundfile、Matplotlibを使った、音声ファイルの波形と詳細を表示し、サンプリングレートとモノラル・ステレオの編集ができるツールです。</p>
@@ -73,10 +99,24 @@
                 <p>制作時期: 2025年1月</p>
             </div>
             <div class="project-images">
-                <img src="images/projects/pygamedrummachine1.png" alt="Pygame Drum Machine1" style="width:360px;height:180px;">
-                <img src="images/projects/pygamedrummachine2.png" alt="Pygame Drum Machine2" style="width:360px;height:180px;">
-                <img src="images/projects/pygamedrummachine3.png" alt="Pygame Drum Machine3" style="width:360px;height:180px;">
-                <img src="images/projects/pygamedrummachine.gif" alt="Pygame Drum Machine" style="width:360px;height:180px;">
+                <div class="image-carousel" data-images='[
+                    {"src": "images/projects/pygamedrummachine1.png", "alt": "Pygame Drum Machine1"},
+                    {"src": "images/projects/pygamedrummachine2.png", "alt": "Pygame Drum Machine2"},
+                    {"src": "images/projects/pygamedrummachine3.png", "alt": "Pygame Drum Machine3"},
+                    {"src": "images/projects/pygamedrummachine.gif", "alt": "Pygame Drum Machine"}
+                ]'>
+                    <div class="carousel-container">
+                        <img src="images/projects/pygamedrummachine1.png" alt="Pygame Drum Machine1" class="carousel-image active" style="width:360px;height:180px;">
+                        <button class="carousel-prev" aria-label="前の画像">‹</button>
+                        <button class="carousel-next" aria-label="次の画像">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                </div>
             </div>
             <div class="project-description">
                 <p>PythonとPygameで作成した、ドラムシーケンサー、リズムマシンを再現したアプリケーションです。6つのドラム音にそれぞれの行が割り振られ、その中にノーツを配置することで、ドラムパートを作成し、再生し、聞くことができます。</p>
@@ -144,5 +184,7 @@
     <footer>
         <p>&copy; 2025 OMU-Haruki</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptの基本構文と特徴 - Blog</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="../blog.html" style="color: white; text-decoration: none;">Blog</a></h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-page">
+        <header class="article-header">
+            <h1>JavaScriptの基本構文と特徴</h1>
+            <div class="article-meta">
+                <span class="date">2025年7月8日</span>
+                <span class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">プログラミング</span>
+                    <span class="tag">Web開発</span>
+                </span>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <section>
+                <h2>JavaScriptとは</h2>
+                <p>JavaScriptは、ウェブページに動きや機能を追加するためのプログラミング言語です。1995年に作られて以来、現在では世界中のウェブサイトで使われています。</p>
+                <p>元々はウェブブラウザの中だけで動く言語でしたが、今ではサーバーやスマートフォンアプリの開発にも使われています。</p>
+                <p>本記事では、JavaScriptの基本的な構文や特徴について解説します。</p>
+            </section>
+
+            <section>
+                <h2>JavaScriptの特徴</h2>
+                
+                <h3>1. すぐに実行できる</h3>
+                <p>JavaScriptはインタープリター言語と呼ばれます。これは、コンパイル（翻訳）という作業をしなくても、すぐにブラウザで実行できることを意味します。コードを書いたらすぐに結果を見ることができるので、学習や開発がしやすいです。</p>
+
+                <h3>2. 変数の型を自動で判断してくれる</h3>
+                <p>JavaScriptは動的型付けという仕組みを使っています。これは、変数に入れる値の種類（数字、文字など）を事前に決めなくても、自動で判断してくれることです。</p>
+                <pre><code>let message = "こんにちは";    // 文字列
+let number = 100;             // 数値
+let isTrue = true;            // 真偽値（trueまたはfalse）</code></pre>
+
+                <h3>3. オブジェクト指向プログラミングができる</h3>
+                <p>JavaScriptはオブジェクト指向プログラミングに対応しています。これにより、現実世界のものをプログラムで表現しやすくなります。例えば、「人」や「車」などをオブジェクトとして作ることができます。</p>
+            </section>
+
+            <section>
+                <h2>基本的な構文</h2>
+                
+                <h3>変数の作り方</h3>
+                <p>変数は、値を入れておく箱のようなものです。JavaScriptでは3つの方法で変数を作ることができます：</p>
+                <pre><code>var name = "太郎";         // 古い書き方
+let age = 20;              // 新しい書き方（値を変更できる）
+const city = "東京";        // 定数（値を変更できない）</code></pre>
+                <p>現在は<code>let</code>と<code>const</code>を使うことが推奨されています。</p>
+
+                <h3>データの種類</h3>
+                <p>JavaScriptで扱えるデータの種類を紹介します：</p>
+                <ul>
+                    <li><strong>文字列（string）</strong>：文字や文章を表します</li>
+                    <li><strong>数値（number）</strong>：数字を表します</li>
+                    <li><strong>真偽値（boolean）</strong>：trueまたはfalseの値</li>
+                    <li><strong>配列（array）</strong>：複数の値をまとめて管理します</li>
+                    <li><strong>オブジェクト（object）</strong>：関連する情報をまとめて管理します</li>
+                </ul>
+
+                <h3>関数の作り方</h3>
+                <p>関数は、まとまった処理に名前をつけて、何度も使えるようにするものです：</p>
+                <pre><code>// 基本的な関数の書き方
+function greet(name) {
+    return "こんにちは、" + name + "さん！";
+}
+
+// 関数を使う
+let message = greet("田中");
+console.log(message); // 「こんにちは、田中さん！」と表示</code></pre>
+
+                <h3>条件分岐</h3>
+                <p>条件によって処理を変えたい時に使います：</p>
+                <pre><code>let score = 85;
+
+if (score >= 90) {
+    console.log("優秀です！");
+} else if (score >= 70) {
+    console.log("良い成績です");
+} else {
+    console.log("もう少し頑張りましょう");
+}</code></pre>
+
+                <h3>繰り返し処理</h3>
+                <p>同じ処理を何度も行いたい時に使います：</p>
+                <pre><code>// 1から5まで数える
+for (let i = 1; i <= 5; i++) {
+    console.log(i + "回目");
+}
+
+// 配列の中身を1つずつ処理する
+let fruits = ["りんご", "みかん", "バナナ"];
+for (let fruit of fruits) {
+    console.log(fruit + "が好きです");
+}</code></pre>
+            </section>
+
+            <section>
+                <h2>配列とオブジェクトの使い方</h2>
+                
+                <h3>配列</h3>
+                <p>配列は、複数の値を順番に並べて管理するものです：</p>
+                <pre><code>// 配列の作成
+let colors = ["赤", "青", "緑"];
+
+// 配列の操作
+colors.push("黄色");        // 最後に追加
+colors.pop();               // 最後を削除
+console.log(colors[0]);     // 最初の要素を取得（"赤"）
+console.log(colors.length); // 配列の長さを取得</code></pre>
+
+                <h3>オブジェクト</h3>
+                <p>オブジェクトは、関連する情報をまとめて管理するものです：</p>
+                <pre><code>// オブジェクトの作成
+let person = {
+    name: "田中太郎",
+    age: 25,
+    city: "大阪",
+    greet: function() {
+        return "はじめまして、" + this.name + "です";
+    }
+};
+
+// オブジェクトの使用
+console.log(person.name);     // "田中太郎"
+console.log(person.greet());  // "はじめまして、田中太郎です"</code></pre>
+            </section>
+
+            <section>
+                <h2>便利な新機能</h2>
+                
+                <h3>テンプレートリテラル</h3>
+                <p>文字列の中に変数を埋め込みやすくする機能です：</p>
+                <pre><code>let name = "佐藤";
+let age = 30;
+
+// 従来の書き方
+let message1 = "私の名前は" + name + "で、" + age + "歳です";
+
+// 新しい書き方（バッククォートを使用）
+let message2 = `私の名前は${name}で、${age}歳です`;</code></pre>
+
+                <h3>アロー関数</h3>
+                <p>関数をより短く書ける方法です：</p>
+                <pre><code>// 従来の書き方
+function add(a, b) {
+    return a + b;
+}
+
+// アロー関数の書き方
+const add2 = (a, b) => {
+    return a + b;
+};
+
+// さらに短い書き方
+const add3 = (a, b) => a + b;</code></pre>
+
+                <h3>分割代入</h3>
+                <p>配列やオブジェクトから値を取り出しやすくする機能です：</p>
+                <pre><code>// 配列の分割代入
+let numbers = [1, 2, 3];
+let [first, second, third] = numbers;
+
+// オブジェクトの分割代入
+let user = {name: "山田", age: 28};
+let {name, age} = user;</code></pre>
+            </section>
+
+            <section>
+                <h2>実際に使ってみる</h2>
+                <p>実際にJavaScriptを使って、私のポートフォリオサイトに機能を追加しました。実装した3つの機能を例に、JavaScriptがどのように活用されているかを解説します。</p>
+                <p>これらの機能は、基本的な構文を組み合わせることで作られており、JavaScriptの実用性と柔軟性を示しています。</p>
+                
+                <h3>1. トップへ戻るボタン</h3>
+                <p>長いページをスクロールした際に、ユーザーが簡単にページの最上部に戻れるようにする機能です。この機能では、<strong>DOM操作</strong>、<strong>イベントリスナー</strong>、<strong>条件分岐</strong>、<strong>Web API</strong>など、JavaScriptの基本的な概念がすべて使われています。</p>
+                
+                <h4>機能の概要</h4>
+                <ul>
+                    <li>ページが300px以上スクロールされたときにボタンが表示される</li>
+                    <li>ボタンをクリックするとスムーズにページトップまでスクロールする</li>
+                    <li>ボタンは固定位置に表示され、常にアクセス可能</li>
+                </ul>
+                <pre><code>// DOMが読み込まれてから実行
+document.addEventListener('DOMContentLoaded', function() {
+    // ボタン要素を作成
+    const backToTopButton = document.createElement('button');
+    backToTopButton.id = 'back-to-top';
+    backToTopButton.innerHTML = '↑';
+    
+    // ページにボタンを追加
+    document.body.appendChild(backToTopButton);
+    
+    // スクロール位置を監視
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset;
+        
+        // 条件分岐：300px以上スクロールしたらボタンを表示
+        if (scrollTop > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+    
+    // ボタンクリック時のスムーススクロール
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});</code></pre>
+                
+                <h4>コードの詳細解説</h4>
+                <p><strong>1. DOMContentLoadedイベント</strong></p>
+                <p><code>document.addEventListener('DOMContentLoaded', function() {...})</code>は、HTMLの読み込みが完了してからJavaScriptを実行するための仕組みです。これにより、まだ存在しない要素にアクセスしようとするエラーを防げます。</p>
+                
+                <p><strong>2. 要素の動的作成</strong></p>
+                <p><code>document.createElement('button')</code>でボタン要素をプログラム的に作成し、<code>innerHTML</code>でボタンの内容（↑）を設定しています。これは「DOM操作」と呼ばれる重要な技術です。</p>
+                
+                <p><strong>3. スクロール監視</strong></p>
+                <p><code>window.addEventListener('scroll', ...)</code>でスクロールイベントを監視し、<code>window.pageYOffset</code>で現在のスクロール位置を取得します。300px以上スクロールした場合のみボタンを表示することで、ユーザビリティを向上させています。</p>
+                
+                <p><strong>4. CSSクラスの操作</strong></p>
+                <p><code>classList.add('show')</code>と<code>classList.remove('show')</code>でCSSクラスを動的に追加・削除し、ボタンの表示・非表示を制御しています。これはJavaScriptとCSSの連携の良い例です。</p>
+                
+                <p><strong>5. スムーススクロール</strong></p>
+                <p><code>window.scrollTo({top: 0, behavior: 'smooth'})</code>は、ページトップまでなめらかにスクロールするWeb APIです。<code>behavior: 'smooth'</code>により、瞬間移動ではなく滑らかな動きを実現しています。</p>
+                <p><strong>使用している技術：</strong></p>
+                <ul>
+                    <li><strong>DOM操作</strong>：<code>createElement</code>（要素作成）、<code>appendChild</code>（要素追加）</li>
+                    <li><strong>イベントリスナー</strong>：<code>addEventListener</code>（イベント監視）</li>
+                    <li><strong>条件分岐</strong>：<code>if-else</code>文（状態に応じた処理分岐）</li>
+                    <li><strong>オブジェクトのメソッド</strong>：<code>classList.add/remove</code>（CSSクラス操作）</li>
+                    <li><strong>Web API</strong>：<code>window.scrollTo</code>（スクロール制御）</li>
+                </ul>
+
+                <h3>2. 画像カルーセル機能</h3>
+                <p>プロジェクトページで複数の画像を1つのスペースで切り替えて表示する機能です。この機能は<strong>配列操作</strong>、<strong>JSON処理</strong>、<strong>循環アルゴリズム</strong>など、より高度な概念を含んでいます。</p>
+                
+                <h4>機能の概要</h4>
+                <ul>
+                    <li>複数の画像を1つの表示エリアで順番に表示</li>
+                    <li>前へ・次へボタンで画像を手動切り替え</li>
+                    <li>ドット（インジケーター）で現在表示中の画像を視覚的に表示</li>
+                    <li>10秒間隔での自動切り替え（ホバー時は停止）</li>
+                </ul>
+                <pre><code>// カルーセルの初期化
+carousels.forEach(function(carousel) {
+    // JSON.parseでデータ属性から配列を取得
+    const images = JSON.parse(carousel.dataset.images);
+    let currentIndex = 0;
+    
+    // 次の画像を表示する関数
+    function showNextImage() {
+        // 配列のインデックスを循環させる
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    }
+    
+    // 前の画像を表示する関数
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    }
+    
+    // 画像とドットの表示を更新
+    function updateImage() {
+        carouselImage.src = images[currentIndex].src;
+        carouselImage.alt = images[currentIndex].alt;
+        
+        // 全てのドットから active クラスを削除
+        dots.forEach(dot => dot.classList.remove('active'));
+        // 現在のドットに active クラスを追加
+        dots[currentIndex].classList.add('active');
+    }
+});</code></pre>
+                
+                <h4>コードの詳細解説</h4>
+                <p><strong>1. forEachによる反復処理</strong></p>
+                <p><code>carousels.forEach(function(carousel) {...})</code>は、ページ内の全てのカルーセル要素に対して同じ処理を適用する配列メソッドです。これにより、複数のカルーセルが存在しても、それぞれ独立して動作させることができます。</p>
+                
+                <p><strong>2. JSON.parseによるデータ解析</strong></p>
+                <p><code>JSON.parse(carousel.dataset.images)</code>は、HTML要素のdata属性に保存されたJSON文字列を、JavaScriptの配列オブジェクトに変換します。これにより、HTMLとJavaScriptの間でデータをやり取りできます。</p>
+                
+                <p><strong>3. 循環アルゴリズム</strong></p>
+                <p><code>(currentIndex + 1) % images.length</code>は剰余演算子（%）を使った循環処理です。最後の画像の次は最初の画像に戻り、最初の画像の前は最後の画像になるという無限ループを実現しています。</p>
+                
+                <p><strong>4. 関数の定義と活用</strong></p>
+                <p><code>showNextImage()</code>、<code>showPrevImage()</code>、<code>updateImage()</code>という3つの関数を定義し、それぞれが特定の責任を持つことで、コードの可読性と保守性を向上させています。</p>
+                
+                <p><strong>5. DOM要素の属性変更</strong></p>
+                <p><code>carouselImage.src</code>と<code>carouselImage.alt</code>を変更することで、表示する画像を動的に切り替えています。また、ドットのアクティブ状態も同期して更新しています。</p>
+                <p><strong>使用している技術：</strong></p>
+                <ul>
+                    <li><strong>配列の操作</strong>：<code>forEach</code>（反復処理）、インデックス操作（要素アクセス）</li>
+                    <li><strong>JSON操作</strong>：<code>JSON.parse</code>（文字列から配列への変換）</li>
+                    <li><strong>剰余演算子</strong>：<code>%</code>による循環処理（無限ループの実現）</li>
+                    <li><strong>関数の定義</strong>：処理の分割と再利用性の向上</li>
+                    <li><strong>DOM要素の属性変更</strong>：<code>src</code>、<code>alt</code>の動的更新</li>
+                </ul>
+
+                <h3>3. プロジェクト説明の展開・折りたたみ機能</h3>
+                <p>長い説明文を初期状態では省略して表示し、「もっと表示する」ボタンで全文を表示する機能です。この機能では<strong>文字列操作</strong>、<strong>条件判定</strong>、<strong>動的要素生成</strong>など、実用的なWebアプリケーションで頻繁に使われる技術が組み合わされています。</p>
+                
+                <h4>機能の概要</h4>
+                <ul>
+                    <li>説明文の長さを自動判定（段落数または文字数）</li>
+                    <li>長い説明文を自動的に折りたたんで表示</li>
+                    <li>「もっと表示する」ボタンで全文表示に切り替え</li>
+                    <li>「表示を戻す」ボタンで再び折りたたみ、自動スクロール機能付き</li>
+                </ul>
+                <pre><code>// 全ての説明文要素を取得
+const projectDescriptions = document.querySelectorAll('.project-description');
+
+projectDescriptions.forEach(function(description) {
+    const textContent = description.textContent.trim();
+    const paragraphs = description.querySelectorAll('p');
+    
+    // 条件判定：段落が3つ以上または文字数が300文字を超える場合
+    if (paragraphs.length >= 3 || textContent.length > 300) {
+        // 初期状態で折りたたみ
+        description.classList.add('collapsed');
+        
+        // ボタンを動的に作成
+        const toggleButton = document.createElement('button');
+        toggleButton.className = 'toggle-description';
+        toggleButton.textContent = 'もっと表示する';
+        
+        // クリック時の切り替え処理
+        toggleButton.addEventListener('click', function() {
+            const isCollapsed = description.classList.contains('collapsed');
+            
+            if (isCollapsed) {
+                // 展開処理
+                description.classList.remove('collapsed');
+                toggleButton.textContent = '表示を戻す';
+            } else {
+                // 折りたたみ処理
+                description.classList.add('collapsed');
+                toggleButton.textContent = 'もっと表示する';
+                
+                // スムーススクロール
+                description.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+        
+        // ボタンを要素の後に挿入
+        description.parentNode.insertBefore(toggleButton, description.nextSibling);
+    }
+});</code></pre>
+                
+                <h4>コードの詳細解説</h4>
+                <p><strong>1. 要素の一括取得</strong></p>
+                <p><code>document.querySelectorAll('.project-description')</code>は、指定したCSSセレクターに一致する全ての要素をNodeListとして取得します。これにより、ページ内の全てのプロジェクト説明文に同じ処理を適用できます。</p>
+                
+                <p><strong>2. 文字列と要素の解析</strong></p>
+                <p><code>textContent.trim()</code>で前後の空白を除去した文字列を取得し、<code>length</code>プロパティで文字数を確認します。同時に<code>querySelectorAll('p')</code>で段落数も取得し、複数の条件で判定を行います。</p>
+                
+                <p><strong>3. 論理演算子による複合条件</strong></p>
+                <p><code>paragraphs.length >= 3 || textContent.length > 300</code>では、論理OR演算子（||）を使って「段落が3つ以上」または「文字数が300文字超」のいずれかが真の場合に処理を実行します。</p>
+                
+                <p><strong>4. 状態管理と切り替え処理</strong></p>
+                <p><code>classList.contains('collapsed')</code>で現在の状態を確認し、その結果に基づいて表示を切り替えます。これは状態管理の基本的なパターンです。</p>
+                
+                <p><strong>5. DOM構造の操作</strong></p>
+                <p><code>parentNode.insertBefore(toggleButton, description.nextSibling)</code>は、既存のDOM構造に新しい要素を挿入する方法です。<code>nextSibling</code>により、説明文の直後にボタンを配置しています。</p>
+                
+                <p><strong>6. ユーザビリティの向上</strong></p>
+                <p>折りたたみ時の<code>scrollIntoView({behavior: 'smooth', block: 'start'})</code>により、ユーザーが現在見ている位置を見失わないよう、適切な位置にスムーズにスクロールします。</p>
+                <p><strong>使用している技術：</strong></p>
+                <ul>
+                    <li><strong>配列のメソッド</strong>：<code>querySelectorAll</code>（要素の一括取得）、<code>forEach</code>（反復処理）</li>
+                    <li><strong>文字列操作</strong>：<code>textContent</code>（テキスト取得）、<code>trim()</code>（空白除去）、<code>length</code>（文字数取得）</li>
+                    <li><strong>論理演算子</strong>：<code>||</code>（OR演算子）を使った複合条件判定</li>
+                    <li><strong>真偽値の活用</strong>：<code>classList.contains</code>（状態確認）による状態管理</li>
+                    <li><strong>DOM操作</strong>：<code>insertBefore</code>（要素挿入）、<code>parentNode</code>（親要素参照）</li>
+                    <li><strong>Web API</strong>：<code>scrollIntoView</code>（要素へのスクロール）</li>
+                </ul>
+
+                <h3>JavaScriptの実用性</h3>
+                <p>これらの実例からわかるように、JavaScriptは基本的な構文を組み合わせることで、多彩で実用的なWebサイト機能を実現できます。以下の要素が特に重要な役割を果たしています：</p>
+                <ul>
+                    <li><strong>DOM操作</strong>：HTML要素の動的な取得、作成、変更</li>
+                    <li><strong>イベント処理</strong>：ユーザーの操作に対するリアルタイムな反応</li>
+                    <li><strong>配列とオブジェクト</strong>：複雑なデータの効率的な管理</li>
+                    <li><strong>Web API</strong>：ブラウザが提供する高機能な機能の活用</li>
+                </ul>
+                <p>これらの実例を通して、JavaScriptが単なるプログラミング言語以上の存在であることがわかります。変数、関数、条件分岐、繰り返し処理といった基本構文を組み合わせることで、ユーザーにとって魅力的で使いやすいWebサイトを構築することができます。</p>
+                <p>DOM操作によるページの動的な変更、イベント処理によるユーザーとのインタラクション、配列とオブジェクトによる効率的なデータ管理など、JavaScriptの多面性が現代のWeb開発において不可欠な理由を示しています。</p>
+            </section>
+
+            <section>
+                <h2>まとめ</h2>
+                <p>本記事では、JavaScriptの概要から特徴、基本的な構文、実用例について解説しました。</p>
+                <p>JavaScriptは、ウェブ開発において中核的な役割を果たすプログラミング言語です。その特徴である動的型付け、インタープリター実行、オブジェクト指向対応により、開発者は迅速かつ柔軟にWebアプリケーションを構築できます。</p>
+            </section>
+        </div>
+
+        <nav class="article-navigation">
+            <a href="../blog.html" class="nav-button">← 記事一覧に戻る</a>
+            <a href="portfolio-design.html" class="nav-button">次の記事 →</a>
+        </nav>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 OMU-Haruki</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
