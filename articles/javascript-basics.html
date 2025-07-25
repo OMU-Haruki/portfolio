@@ -188,11 +188,17 @@ let {name, age} = user;</code></pre>
 
             <section>
                 <h2>実際に使ってみる</h2>
-                <p>実際にJavaScriptを使って、私のポートフォリオサイトに機能を追加しました。実装した3つの機能を例に、JavaScriptがどのように活用されているかを解説します。</p>
+                <p>実際にJavaScriptを使って、私のポートフォリオサイトに機能を追加しました。実装した機能のうち3つを例に、JavaScriptがどのように活用されているかを解説します。</p>
                 <p>これらの機能は、基本的な構文を組み合わせることで作られており、JavaScriptの実用性と柔軟性を示しています。</p>
-                
+                <p>これらのコードとcssは、<a href="https://github.com/OMU-Haruki/portfolio">GitHubのリポジトリ</a>で確認できます。</p>
+
                 <h3>1. トップへ戻るボタン</h3>
                 <p>長いページをスクロールした際に、ユーザーが簡単にページの最上部に戻れるようにする機能です。この機能では、<strong>DOM操作</strong>、<strong>イベントリスナー</strong>、<strong>条件分岐</strong>、<strong>Web API</strong>など、JavaScriptの基本的な概念がすべて使われています。</p>
+                
+                <div class="article-image">
+                    <img src="../images/article-images/javascript-basics/back-to-top-demo.png" alt="トップへ戻るボタンのデモ画面" />
+                    <p class="image-caption">トップへ戻るボタンの実装例</p>
+                </div>
                 
                 <h4>機能の概要</h4>
                 <ul>
@@ -256,7 +262,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 </ul>
 
                 <h3>2. 画像カルーセル機能</h3>
-                <p>プロジェクトページで複数の画像を1つのスペースで切り替えて表示する機能です。この機能は<strong>配列操作</strong>、<strong>JSON処理</strong>、<strong>循環アルゴリズム</strong>など、より高度な概念を含んでいます。</p>
+                <p><a href="../index.html#projects">プロジェクト一覧ページ</a>で複数の画像を1つのスペースで切り替えて表示する機能です。この機能は<strong>配列操作</strong>、<strong>JSON処理</strong>、<strong>循環アルゴリズム</strong>など、より高度な概念を含んでいます。</p>
+                
+                <div class="article-image">
+                    <img src="../images/article-images/javascript-basics/carousel-demo.png" alt="画像カルーセル機能のデモ画面" />
+                    <p class="image-caption">画像カルーセル機能の実装例</p>
+                </div>
                 
                 <h4>機能の概要</h4>
                 <ul>
@@ -321,8 +332,13 @@ carousels.forEach(function(carousel) {
                 </ul>
 
                 <h3>3. プロジェクト説明の展開・折りたたみ機能</h3>
-                <p>長い説明文を初期状態では省略して表示し、「もっと表示する」ボタンで全文を表示する機能です。この機能では<strong>文字列操作</strong>、<strong>条件判定</strong>、<strong>動的要素生成</strong>など、実用的なWebアプリケーションで頻繁に使われる技術が組み合わされています。</p>
+                <p><a href="../index.html#projects">プロジェクト一覧ページ</a>の長い説明文を初期状態では省略して表示し、「もっと表示する」ボタンで全文を表示する機能です。この機能では<strong>文字列操作</strong>、<strong>条件判定</strong>、<strong>動的要素生成</strong>など、実用的なWebアプリケーションで頻繁に使われる技術が組み合わされています。</p>
                 
+                <div class="article-image">
+                    <img src="../images/article-images/javascript-basics/toggle-description-demo.png" alt="プロジェクト説明の展開・折りたたみ機能のデモ画面" />
+                    <p class="image-caption">プロジェクト説明の展開・折りたたみ機能の実装例</p>
+                </div>
+
                 <h4>機能の概要</h4>
                 <ul>
                     <li>説明文の長さを自動判定（段落数または文字数）</li>
@@ -418,6 +434,8 @@ projectDescriptions.forEach(function(description) {
                 <p>本記事では、JavaScriptの概要から特徴、基本的な構文、実用例について解説しました。</p>
                 <p>JavaScriptは、ウェブ開発において中核的な役割を果たすプログラミング言語です。その特徴である動的型付け、インタープリター実行、オブジェクト指向対応により、開発者は迅速かつ柔軟にWebアプリケーションを構築できます。</p>
             </section>
+
+            <p>本コンテンツの作成時間（HTML/CSS/JavaScriptの設計・実装を含む）：約10時間</p>
         </div>
 
         <nav class="article-navigation">
